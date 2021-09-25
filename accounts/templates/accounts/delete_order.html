@@ -1,0 +1,13 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+  <br>
+  <form method="post">
+    {% csrf_token %}
+   {{form}}
+   <input type="submit" name="choice" value="Delete">
+   <input type="submit" name="choice" value="Cancel">
+  </form>
+
+
+{% endblock content %}

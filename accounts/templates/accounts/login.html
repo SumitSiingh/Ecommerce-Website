@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+	</head>
+	<body>
+		{% for message in messages %}
+    {{ message }}
+    {% endfor %}
+		<form method="post">
+			{% csrf_token %}
+			{% for item in form %}
+			{{item}}<br><br>
+			{% endfor %}
+			<input type="submit" value="Login">
+		</form><br>
+
+		or <a href="{% url 'register' %}">Register</a>
+	</body>
+</html>
